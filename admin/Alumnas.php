@@ -188,7 +188,7 @@ $res=$g->getGrupos();
     }
 
     function alta() {
-        alert("Dio de Alta");
+        //alert("Dio de Alta");
         event.preventDefault();
         $.ajax({
             url:"../BackEnd/Controlador.php",
@@ -235,7 +235,7 @@ $res=$g->getGrupos();
             }),
             success: function (data) {
                 data=JSON.parse(data);
-                console.log(data);
+                //console.log(data);
                 $('#Nombre_label').val(data[0].nombre);
                  $('#ApellidoP_label').val(data[0].apellido);
                  $('#Edad').val(data[0].edad);
