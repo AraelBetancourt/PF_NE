@@ -29,7 +29,7 @@ $res=$p->getPagosPrivados();
 <form >
     <div class="row">
         <div class="col l10 offset-l1 m12 s12">
-            <table class="striped" style="text-align: center">
+            <table class="responsive-table" style="text-align: center">
                 <thead>
                 <th>Folio</th>
                 <th>Nombre Alumna</th>

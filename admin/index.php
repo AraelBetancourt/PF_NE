@@ -21,13 +21,13 @@ require_once "imports.php";
     <div class="col l10 offset-l1 m126 s12">
         <form action="login.php" method="post" id="login">
             <div class="row">
-                <div class="input-field col offset-m4 s4">
+                <div class="input-field offset-m4 col s12 m4">
                     <input placeholder="Usuario" name="username" id="username" type="text" class="validate center" required>
                     <label for="first_name">Usuario</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col offset-m4 s4">
+                <div class="input-field col offset-m4 s12 m4">
                     <input placeholder="Contraseña"name="password" id="password" type="password" class="center validate" required>
                     <label for="password">Contraseña</label>
                 </div>

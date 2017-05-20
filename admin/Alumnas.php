@@ -46,7 +46,7 @@ $res=$g->getGrupos();
                 <input id="idAlumna" type="text" value="-1" hidden>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 m12">
                     <input placeholder="Nombre" id="Nombre_label" type="text" class="validate" required>
                     <label for="Nombre_label">Nombre</label>
                 </div>
@@ -131,7 +131,7 @@ $res=$g->getGrupos();
                 data=JSON.parse(data);
                 if(data.length!=0){
                     $('#Tabla').empty();
-                    var table = $('<table class="striped"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Apellidos</th> <th>Edad</th> <th>Fecha De Nacimiento</th> <th>Grupo</th><th>Acciones</th> </tr></thead></table>');
+                    var table = $('<table class="responsive-table"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Apellidos</th> <th>Edad</th> <th>Fecha De Nacimiento</th> <th>Grupo</th><th>Acciones</th> </tr></thead></table>');
                     for(i=0; i<data.length; i++){
                         table.append('<tr><td>'+data[i].id+'</td><td>'+data[i].nombre+'</td><td>'+data[i].apellido+'</td><td>'+data[i].edad+'</td><td>'+data[i].fechaNacimiento+'</td><td>'+data[i].idgrupo+'</td><td width="200"><a onclick="elementos(this.id)" id="'+data[i].id+'" class="small material-icons btn red">delete</a><a id="'+data[i].id+'" onclick="elementos2(this.id)" class="small material-icons btn green">mode_edit</a></td></tr>');
                     }
@@ -139,7 +139,7 @@ $res=$g->getGrupos();
                 }
                 else{
                     $('#Tabla').empty();
-                    var table = $('<table class="striped"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Apellidos</th> <th>Edad</th> <th>Fecha De Nacimiento</th> <th>Grupo</th><th>Acciones</th> </tr></thead></table>');
+                    var table = $('<table class="responsive-table"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Apellidos</th> <th>Edad</th> <th>Fecha De Nacimiento</th> <th>Grupo</th><th>Acciones</th> </tr></thead></table>');
                     $('#Tabla').append(table);
                 }
             }

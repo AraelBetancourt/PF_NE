@@ -153,7 +153,7 @@ require_once "imports.php";
                 data=JSON.parse(data);
                 if(data.length!=0){
                     $('#Tabla').empty();
-                    var table = $('<table class="striped"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Acciones</th> </tr></thead></table>');
+                    var table = $('<table class="responsive-table"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Acciones</th> </tr></thead></table>');
                     for(i=0; i<data.length; i++){
                         table.append('<tr><td>'+data[i].id+'</td><td>'+data[i].nombre+'</td><td width="200"><a onclick="elementos(this.id)" id="'+data[i].id+'" class="small material-icons btn red">delete</a><a id="'+data[i].id+'" onclick="elementos2(this.id)" class="small material-icons btn green">mode_edit</a></td></tr>');
                     }
@@ -161,7 +161,7 @@ require_once "imports.php";
                 }
                 else{
                     $('#Tabla').empty();
-                    var table = $('<table class="striped"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Acciones</th> </tr></thead></table>');
+                    var table = $('<table class="responsive-table"> <thead> <tr> <th>Id</th> <th>Nombre</th> <th>Acciones</th> </tr></thead></table>');
                     $('#Tabla').append(table);
                 }
             }
