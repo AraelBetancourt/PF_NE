@@ -8,6 +8,8 @@
 ?>
 <link rel="stylesheet" href="Librerias/materialize/css/materialize.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <script type="text/javascript" src="Librerias/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="Librerias/materialize/js/materialize.min.js"></script>
 

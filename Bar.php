@@ -8,10 +8,18 @@
 require_once "imports.php";
 ?>
 <nav>
+
     <div class="nav-wrapper purple darken-1">
         <a href="index.php" class="brand-logo">Danzlife</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="Lugares.php">Lugares</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
             <li><a href="Lugares.php">Lugares</a></li>
         </ul>
     </div>
 </nav>
+<script>
+    $(".button-collapse").sideNav();
+</script>
