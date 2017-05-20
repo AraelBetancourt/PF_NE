@@ -8,8 +8,8 @@
 require_once "imports.php";
 ?>
 <nav>
-    <div class="nav-wrapper blue">
-        <a href="index.php" class="brand-logo">Logo</a>
+    <div class="nav-wrapper purple darken-1">
+        <a href="index.php" class="brand-logo">Danzlife</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
             <li><a href="Lugares.php">Lugares</a></li>
         </ul>

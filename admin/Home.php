@@ -15,48 +15,16 @@ require_once "imports.php";
 require_once "Bar.php";
 ?>
 <div class="row">
-    <div class="col s3 offset-s3">
+    <div class="col s6 offset-s3">
         <div class="card hoverable">
             <div class="card-image">
-                <img src="Mentira.png">
+                <img src="Danzlife.jpg">
             </div>
-            <div class="card-content">
+            <!--<div class="card-content">
                 <p></p>
-            </div>
-        </div>
-    </div>
-    <div class="col s3 ">
-        <div class="card hoverable">
-            <div class="card-image">
-                <img src="Mentira.png">
-            </div>
-            <div class="card-content">
-                <p></p>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col s3 offset-s3">
-        <div class="card hoverable">
-            <div class="card-image">
-                <img src="Mentira.png">
-            </div>
-            <div class="card-content">
-                <p></p>
-            </div>
-        </div>
-    </div>
-    <div class="col s3 ">
-        <div class="card hoverable">
-            <div class="card-image">
-                <img src="Mentira.png">
-            </div>
-            <div class="card-content">
-                <p></p>
-            </div>
-        </div>
-    </div>
-</div>
 <?php } } ?>

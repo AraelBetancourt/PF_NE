@@ -22,7 +22,7 @@ require_once "imports.php";
 <div class="row">
     <div class="col l10 offset-l1 m12 s12">
         <br>
-        <h5 class="center">Gestion de Alumnas</h5>
+        <h5 class="center">Gestion de Grupos</h5>
         <br><hr><br>
         <a href="#alta" class="btn-floating btn-large waves-effect waves-light green white-text modal-trigger1 right"><i class="material-icons">add</i></a>
     </div>
@@ -38,7 +38,7 @@ require_once "imports.php";
 <div id="alta" class="modal">
     <div class="modal-content">
         <form id="AltaProveedor">
-            <h4 id="CoA">Alta Alumna</h4>
+            <h4 id="CoA">Grupo</h4>
             <div>
                 <input id="idGrupo" type="text" value="-1" hidden>
             </div>

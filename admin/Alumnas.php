@@ -41,7 +41,7 @@ $res=$g->getGrupos();
 <div id="alta" class="modal">
     <div class="modal-content">
         <form id="AltaProveedor">
-            <h4 id="CoA">Alta Alumna</h4>
+            <h4 id="CoA">Alumna</h4>
             <div>
                 <input id="idAlumna" type="text" value="-1" hidden>
             </div>
