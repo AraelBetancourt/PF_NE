@@ -130,23 +130,23 @@ require_once "BackEnd/Grupos.php";
                 {
                     data=JSON.parse(data);
                     if(data[0].res=="Duplicado"){
-                        Materialize.toast('El Folio ya se encuentra en la Base de datos', 3000,"yellow");
+                        Materialize.toast('El Folio ya se encuentra en la Base de datos', 3000,"red");
                     }else if(data=="ia")
-                        Materialize.toast('Falta Seleccionar Alumna', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Alumna', 3000,"red");
                     else if(data=="2")
-                        Materialize.toast('Falta Seleccionar Grupo', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Grupo', 3000,"red");
                     else if(data=="3")
-                        Materialize.toast('Falta Seleccionar Nombre De la Mama', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Nombre De la Mama', 3000,"red");
                     else if(data=="4")
-                        Materialize.toast('Falta Seleccionar Apellido de la Mama', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Apellido de la Mama', 3000,"red");
                     else if(data=="5")
-                        Materialize.toast('Falta Seleccionar Fecha de Pago', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Fecha de Pago', 3000,"red");
                     else if(data=="6")
-                        Materialize.toast('Falta Seleccionar Comprobante de Pago', 3000,"yellow");
+                        Materialize.toast('Falta Seleccionar Comprobante de Pago', 3000,"red");
                     else if(data=="Tipo"){
-                        Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
+                        Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"red");
                     }else if(data=="fo"){
-                        Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
+                        Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"red");
                     }else if(data=="1" || data[0].res=="add"){
                         window.location.href = "Lugares.php";
                     }else if(data=="Error")
