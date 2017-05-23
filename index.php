@@ -65,7 +65,7 @@ require_once "BackEnd/Grupos.php";
             </div>
         </div>
         <div class="col s10 offset-s1 center-align">
-            <input type="submit" value="Aceptar" class="center-align submit btn aves-effect waves-light media-middle" />
+            <input id="enviar" name="enviar" type="submit" value="Aceptar" class="center-align submit btn aves-effect waves-light media-middle" />
         </div>
 
     </form>
@@ -117,6 +117,7 @@ require_once "BackEnd/Grupos.php";
         });
         $("#uploadimage").on('submit',(function(e) {
             e.preventDefault();
+            $('#enviar').attr('disabled', true);
             console.log($('FechaPago').val());
             $.ajax({
                 url: "BackEnd/Pagos_Subida.php",
@@ -150,7 +151,8 @@ require_once "BackEnd/Grupos.php";
                         window.location.href = "Lugares.php";
                     }else if(data=="Error")
                         Materialize.toast('Hay un Error en el sistema por favor intentalo mas tarde', 3000,"red");
-                    console.log(data);
+                    //console.log(data);
+                    $('#enviar').attr('disabled', false);
                 }
             });
         }));
