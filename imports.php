@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script type="text/javascript" src="Librerias/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="Librerias/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="Librerias/materialize/js/materialize.js"></script>
 
 <!--<link rel="stylesheet" href="includes/select2/select2.css">
 <link rel="stylesheet" href="includes/modals/css/myModal.css">
