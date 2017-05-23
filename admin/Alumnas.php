@@ -38,7 +38,7 @@ $res=$g->getGrupos();
     </div>
 </div>
 
-<div id="alta" class="modal">
+<div id="alta" class="modal { width: 75% !important  }  ">
     <div class="modal-content">
         <form id="AltaProveedor">
             <h4 id="CoA">Alumna</h4>
