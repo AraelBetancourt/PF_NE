@@ -172,7 +172,7 @@ require_once "BackEnd/Grupos.php";
                         setTimeout(
                             function()
                             {
-                                //window.location.href = "Lugares.php";
+                                window.location.href = "Lugares.php";
                             }, 3000);
                     }
 
