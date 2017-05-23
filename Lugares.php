@@ -21,6 +21,8 @@ $res=$p->getPagospublicos();
 </head>
 <body>
 <form >
+    <h4 class="center">Orden de envios de Comprobantes</h4>
+    <p class="center">Festival Verano 2017</p>
     <div class="row">
         <div class="col l10 offset-l1 m12 s12">
             <table class="striped" style="text-align: center">
