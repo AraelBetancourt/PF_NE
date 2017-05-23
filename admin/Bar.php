@@ -27,6 +27,7 @@ require_once "imports.php"
             <li><a href="logout.php">Cerrar Sesion</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
+            <li><a href="Home.php">Inicio</a></li>
             <li><a href="Alumnas.php">Alumnas</a></li>
             <li><a href="Grupos.php">Grupos</a></li>
             <li><a href="Pagos.php">Pagos</a></li>

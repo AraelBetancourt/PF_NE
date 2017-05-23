@@ -17,6 +17,7 @@ require_once "imports.php";
             <li><a href="Lugares.php">Lugares</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="Lugares.php">Lugares</a></li>
         </ul>
     </div>
