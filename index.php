@@ -12,7 +12,7 @@ require_once "BackEnd/Grupos.php";
 ?>
 <div class="row">
     <form id="uploadimage" method="post" class="col l10 offset-l1 m12 s12" enctype="multipart/form-data">
-        <h5 class="center">Formulario de envio de Comprobantes</h5>
+        <h5 class="center">Formulario de envío de Comprobantes</h5>
         <h5 class="center">Festival Verano 2017</h5><br>
         <div class="input-field col s12">
             <select name="IdAlumna" id="IdAlumna">
