@@ -63,7 +63,7 @@ require_once "BackEnd/Grupos.php";
         <div class="row">
             <div class="input-field col s12">
                 <input name="Folio" id="Folio" type="number" min="1" max="9999999999" class="validate">
-                <label for="Folio">Foliode autorización </label>
+                <label for="Folio">Folio de autorización </label>
             </div>
         </div>
         <div class="col s10 offset-s1 center-align">
