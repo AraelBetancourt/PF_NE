@@ -148,7 +148,15 @@ require_once "BackEnd/Grupos.php";
                     }else if(data=="fo"){
                         Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"red");
                     }else if(data=="1" || data[0].res=="add"){
-                        window.location.href = "Lugares.php";
+                        $('#enviar').attr('disabled', true);
+                        Materialize.toast('Envio Exitoso', 3000,"green");
+                        setTimeout(
+                            function()
+                            {
+                                window.location.href = "Lugares.php";
+                            }, 3000);
+
+
                     }else if(data=="Error")
                         Materialize.toast('Hay un Error en el sistema por favor intentalo mas tarde', 3000,"red");
                     //console.log(data);
