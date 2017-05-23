@@ -112,7 +112,8 @@ require_once "BackEnd/Grupos.php";
         $('.datepicker').pickadate({
             format: 'yyyy-mm-dd',
             selectMonths: true,
-            selectYears: 17
+            selectYears:false,
+            //selectYears: 1
         });
         $("#uploadimage").on('submit',(function(e) {
             e.preventDefault();
@@ -126,7 +127,10 @@ require_once "BackEnd/Grupos.php";
                 processData:false,
                 success: function(data)
                 {
-                    if(data=="ia")
+                    data=JSON.parse(data);
+                    if(data[0].res=="Duplicado"){
+                        Materialize.toast('El Folio ya se encuentra en la Base de datos', 3000,"yellow");
+                    }else if(data=="ia")
                         Materialize.toast('Falta Seleccionar Alumna', 3000,"yellow");
                     else if(data=="2")
                         Materialize.toast('Falta Seleccionar Grupo', 3000,"yellow");
@@ -142,7 +146,7 @@ require_once "BackEnd/Grupos.php";
                         Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
                     }else if(data=="fo"){
                         Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
-                    }else if(data=="1"){
+                    }else if(data=="1" || data[0].res=="add"){
                         window.location.href = "Lugares.php";
                     }else if(data=="Error")
                         Materialize.toast('Hay un Error en el sistema por favor intentalo mas tarde', 3000,"red");

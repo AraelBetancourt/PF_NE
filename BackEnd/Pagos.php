@@ -14,9 +14,9 @@ class Pagos extends Conection
     }
 
     public function AddPago($ida,$nom,$apm,$fechaPago,$url,$fo){
-        $sql='call addPago('.$ida.',"'.$nom.'","'.$apm.'","'.$fechaPago.'","'.$url.'","'.$fo.'");';
-        $res=$this->_db->query($sql);
-        return $res;
+        $result=$this->_db->query('call addPago('.$ida.',"'.$nom.'","'.$apm.'","'.$fechaPago.'","'.$url.'","'.$fo.'");');
+        $art = $result->fetch_all(MYSQLI_ASSOC);
+        return $art;
     }
 
     public function getPagosPrivados(){

@@ -112,7 +112,7 @@ $res=$g->getGrupos();
             selectYears: 200,
             formatSubmit: 'yyyy-mm-dd',
             min: new Date(1980,1,1),
-            max: new Date(2010,12,31)
+            max: new Date(2017,12,31)
         });
         $('select').material_select();
         $('.modal').modal({

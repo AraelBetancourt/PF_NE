@@ -20,6 +20,7 @@ require_once "imports.php"
         <a href="Home.php" class="brand-logo">Danzlife</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="Home.php">Inicio</a></li>
             <li><a href="Alumnas.php">Alumnas</a></li>
             <li><a href="Grupos.php">Grupos</a></li>
             <li><a href="Pagos.php">Pagos</a></li>

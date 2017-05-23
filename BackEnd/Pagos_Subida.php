@@ -8,15 +8,15 @@
  */
 require_once "Pagos.php";
 if($_POST['IdAlumna']==""){
-    echo "ia";
+    echo json_encode("ia");
 }else if($_POST['nom']==""){
-    echo "3";
+    echo json_encode("3");
 } else if($_POST['Ape']==""){
-    echo "4";
+    echo json_encode("4");
 }else if($_POST['Folio']==""){
-    echo "fo";
+    echo json_encode("fo");
 } else if($_POST['FechaPago']==""){
-    echo "5";
+    echo json_encode("5");
 }else if($_FILES["file"]['name']) {
     $dir_subida = '/var/www/html/PF_NE/imagen/';
     $validextensions = array("pdf", "jpg", "png");
@@ -26,7 +26,7 @@ if($_POST['IdAlumna']==""){
         ) && in_array($file_extension, $validextensions)) {
         if ($_FILES["file"]["error"] > 0)
         {
-            echo "nes";
+            echo json_encode("nes");
         }
         else
         {
@@ -42,9 +42,9 @@ if($_POST['IdAlumna']==""){
                 if (move_uploaded_file($_FILES['file']['tmp_name'], $fichero_subido)) {
                     $p=new Pagos();
                     $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero,$_POST['Folio']);
-                    echo $re;
+                    echo json_encode($re);
                 } else {
-                    echo "Error";
+                    echo json_encode("Error");
                 }
             }
             else
@@ -58,16 +58,16 @@ if($_POST['IdAlumna']==""){
                 if (move_uploaded_file($_FILES['file']['tmp_name'], $fichero_subido)) {
                     $p=new Pagos();
                     $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero,$_POST['Folio']);
-                    echo $re;
+                    echo json_encode($re);
                 } else {
-                    echo "Error";
+                    echo json_encode("Error");
                 }
             }
         }
     }
     else
     {
-        echo "Tipo";
+        echo json_encode("Tipo");
     }
 }else
     echo "6";
