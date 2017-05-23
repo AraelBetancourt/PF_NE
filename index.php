@@ -12,8 +12,8 @@ require_once "BackEnd/Grupos.php";
 ?>
 <div class="row">
     <form id="uploadimage" method="post" class="col l10 offset-l1 m12 s12" enctype="multipart/form-data">
-        <h4 class="center">Formulario envio de Comprobantes</h4>
-        <p class="center">Festival Verano 2017</p>
+        <h6 class="center">Formulario envio de Comprobantes</h6>
+        <h5 class="center">Festival Verano 2017</h5>
         <div class="input-field col s12">
             <select name="IdAlumna" id="IdAlumna">
                 <option value="" disabled selected>Selecciona Alumna</option>
