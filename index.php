@@ -60,7 +60,7 @@ require_once "BackEnd/Grupos.php";
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input name="Folio" id="Folio" type="number" min="6" max="10" class="validate">
+                <input name="Folio" id="Folio" type="number" min="1" max="9999999999" class="validate">
                 <label for="Folio">Folio</label>
             </div>
         </div>
