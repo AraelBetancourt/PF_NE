@@ -19,7 +19,7 @@ if($_POST['IdAlumna']==""){
     echo json_encode("5");
 }else if($_FILES["file"]['name']) {
     $dir_subida = '/var/www/html/PF_NE/imagen/';
-    $validextensions = array("pdf", "jpg", "png");
+    $validextensions = array("pdf", "jpg", "png","PDF", "JPG", "PNG");
     $temporary = explode(".", $_FILES["file"]["name"]);
     $file_extension = end($temporary);
     if ((($_FILES["file"]["type"] == "image/png") || ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "application/pdf")
