@@ -21,7 +21,7 @@ require_once "BackEnd/Grupos.php";
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input name="Grupo" id="Grupo" type="text" disabled>
+                <input name="Grupo" id="Grupo" type="text" class="validate" >
                 <label for="Grupo">Grupo</label>
             </div>
         </div>
@@ -54,11 +54,20 @@ require_once "BackEnd/Grupos.php";
                     <input name="file" id="file" type="file">
                 </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" name="file" id="file"  disabled/>
+                    <input class="file-path validate" type="text" name="file" id="file" />
                 </div>
             </div>
         </div>
-        <input type="submit" value="Aceptar" class="submit btn aves-effect waves-light right" />
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="Folio" id="Folio" type="text" class="validate">
+                <label for="Folio">Folio</label>
+            </div>
+        </div>
+        <div class="col s10 offset-s1 center-align">
+            <input type="submit" value="Aceptar" class="center-align submit btn aves-effect waves-light media-middle" />
+        </div>
+
     </form>
 </div>
 <script>
@@ -131,9 +140,10 @@ require_once "BackEnd/Grupos.php";
                         Materialize.toast('Falta Seleccionar Comprobante de Pago', 3000,"yellow");
                     else if(data=="Tipo"){
                         Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
+                    }else if(data=="fo"){
+                        Materialize.toast('Formato Invalido Solo se admite PDF, JPG y PNG', 3000,"yellow");
                     }else if(data=="1"){
-                        Materialize.toast('Guardado Correctamente', 3000,"green");
-                        $("#uploadimage")[0].reset();
+                        window.location.href = "Lugares.php";
                     }else if(data=="Error")
                         Materialize.toast('Hay un Error en el sistema por favor intentalo mas tarde', 3000,"red");
                     console.log(data);

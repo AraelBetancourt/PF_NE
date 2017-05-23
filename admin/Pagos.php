@@ -38,6 +38,7 @@ $res=$p->getPagosPrivados();
                 <th>Fecha de Pago</th>
                 <th>Fecha de Envio</th>
                 <th>Comprobante</th>
+                <th>Folio</th>
                 </thead>
                 <tbody>
                 <?php
@@ -50,6 +51,7 @@ $res=$p->getPagosPrivados();
                     echo "<td>".$re['fechapago']."</td>";
                     echo "<td>".$re['fechaenvio']."</td>";
                     echo "<td> <a href=".$re['url'].">Ver</a></td>";
+                    echo "<td>".$re['Folio']."</td>";
                     echo "</tr>";
 
                 }

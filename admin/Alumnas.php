@@ -109,7 +109,10 @@ $res=$g->getGrupos();
         $('.datepicker').pickadate({
             format: 'yyyy-mm-dd',
             selectMonths: true,
-            selectYears: 15
+            selectYears: 200,
+            formatSubmit: 'yyyy-mm-dd',
+            min: new Date(1980,1,1),
+            max: new Date(2010,12,31)
         });
         $('select').material_select();
         $('.modal').modal({

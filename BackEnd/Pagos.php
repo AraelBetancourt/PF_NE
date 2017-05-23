@@ -13,8 +13,8 @@ class Pagos extends Conection
         parent::__construct();
     }
 
-    public function AddPago($ida,$nom,$apm,$fechaPago,$url){
-        $sql='call addPago('.$ida.',"'.$nom.'","'.$apm.'","'.$fechaPago.'","'.$url.'");';
+    public function AddPago($ida,$nom,$apm,$fechaPago,$url,$fo){
+        $sql='call addPago('.$ida.',"'.$nom.'","'.$apm.'","'.$fechaPago.'","'.$url.'","'.$fo.'");';
         $res=$this->_db->query($sql);
         return $res;
     }

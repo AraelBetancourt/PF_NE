@@ -13,6 +13,8 @@ if($_POST['IdAlumna']==""){
     echo "3";
 } else if($_POST['Ape']==""){
     echo "4";
+}else if($_POST['Folio']==""){
+    echo "fo";
 } else if($_POST['FechaPago']==""){
     echo "5";
 }else if($_FILES["file"]['name']) {
@@ -39,7 +41,7 @@ if($_POST['IdAlumna']==""){
                 $fichero_subido = $dir_subida . $archivo1;
                 if (move_uploaded_file($_FILES['file']['tmp_name'], $fichero_subido)) {
                     $p=new Pagos();
-                    $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero);
+                    $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero,$_POST['Folio']);
                     echo $re;
                 } else {
                     echo "Error";
@@ -55,7 +57,7 @@ if($_POST['IdAlumna']==""){
                 $fichero_subido = $dir_subida .$archivo1;
                 if (move_uploaded_file($_FILES['file']['tmp_name'], $fichero_subido)) {
                     $p=new Pagos();
-                    $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero);
+                    $re=$p->AddPago($_POST['IdAlumna'],$_POST['nom'],$_POST['Ape'],$_POST['FechaPago'],$Ficero,$_POST['Folio']);
                     echo $re;
                 } else {
                     echo "Error";
