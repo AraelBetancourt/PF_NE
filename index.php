@@ -114,7 +114,7 @@ require_once "BackEnd/Grupos.php";
         $('.datepicker').pickadate({
             format: 'yyyy-mm-dd',
             selectMonths: true,
-            selectYears:false,
+            selectYears:false
             //selectYears: 1
         });
         $("#uploadimage").on('submit',(function(e) {
@@ -131,12 +131,16 @@ require_once "BackEnd/Grupos.php";
                 success: function(data)
                 {
                     data=JSON.parse(data);
+                    console.log(data);
                     if(data[0].res=="Duplicado"){
                         Materialize.toast('El Folio ya se encuentra en la Base de datos', 3000,"red");
                         $('#enviar').attr('disabled', false);
                     }else if(data=="ia"){
                         Materialize.toast('Falta Seleccionar Alumna', 3000,"red");
                     $('#enviar').attr('disabled', false);
+                    }else if(data=="fol"){
+                        Materialize.toast('Longitod de Folio debe ser minimio de 6 digitos', 3000,"red");
+                        $('#enviar').attr('disabled', false);
                     }else if(data=="2"){
                         Materialize.toast('Falta Seleccionar Grupo', 3000,"red");
                     $('#enviar').attr('disabled', false);
@@ -168,7 +172,7 @@ require_once "BackEnd/Grupos.php";
                         setTimeout(
                             function()
                             {
-                                window.location.href = "Lugares.php";
+                                //window.location.href = "Lugares.php";
                             }, 3000);
                     }
 

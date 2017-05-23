@@ -15,7 +15,9 @@ if($_POST['IdAlumna']==""){
     echo json_encode("4");
 }else if($_POST['Folio']==""){
     echo json_encode("fo");
-} else if($_POST['FechaPago']==""){
+}else if(strlen($_POST['Folio'])<=6){
+    echo json_encode("fol");
+} else if($_POST['FechaPago']=="") {
     echo json_encode("5");
 }else if($_FILES["file"]['name']) {
     $dir_subida = '/var/www/html/PF_NE/imagen/';
