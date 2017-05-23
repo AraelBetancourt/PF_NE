@@ -50,7 +50,7 @@ $res=$p->getPagosPrivados();
                     echo "<td>".$re['nomMama']."</td>";
                     echo "<td>".$re['fechapago']."</td>";
                     echo "<td>".$re['fechaenvio']."</td>";
-                    echo "<td> <a href=".$re['url'].">Ver</a></td>";
+                    echo "<td> <a href=".$re['url']." target='_blank'>Ver</a></td>";
                     echo "<td>".$re['Folio']."</td>";
                     echo "</tr>";
 
