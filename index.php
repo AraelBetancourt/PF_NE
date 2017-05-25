@@ -14,6 +14,14 @@ require_once "BackEnd/Grupos.php";
     <form id="uploadimage" method="post" class="col l10 offset-l1 m12 s12" enctype="multipart/form-data">
         <h5 class="center">Formulario de envío de Comprobantes</h5>
         <h5 class="center">Festival Verano 2017</h5><br>
+        <div class="row">
+            <div class="input-field col s12">
+                <select name="Grupo" id="Grupo">
+                    <option value="" disabled selected>Selecciona Grupo</option>
+                </select>
+                <label >Nombre de la Alumna</label>
+            </div>
+        </div>
         <div class="input-field col s12">
             <select name="IdAlumna" id="IdAlumna">
                 <option value="" disabled selected>Selecciona Alumna</option>
@@ -21,12 +29,7 @@ require_once "BackEnd/Grupos.php";
             </select>
             <label >Nombre de la Alumna</label>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="Grupo" id="Grupo" type="text" class="validate" >
-                <label for="Grupo">Grupo</label>
-            </div>
-        </div>
+
         <div class="input-field col s12">
             <label >Nombre de la mama</label><br>
         </div>
@@ -73,19 +76,29 @@ require_once "BackEnd/Grupos.php";
     </form>
 </div>
 <script>
-    $('#IdAlumna').on('change', function() {
-        var id=$('#IdAlumna').val();
+    $('#Grupo').on('change', function() {
+        $('#IdAlumna')
+            .find('option')
+            .remove()
+            .end()
+            .append(' <option value="" disabled selected>Selecciona Alumna</option>')
+            .val('')
+        ;
         $.ajax({
             url:"BackEnd/Controlador.php",
             type:'post',
             data:({
-                Action:"Grupos",
-                Metodo: "Alumnas ID",
-                atributos: id
+                Action:"Alumnas",
+                Metodo: "GetAlumnasbyGrupo",
+                id:$('#Grupo').val()
             }),
             success: function (data) {
                 data=JSON.parse(data);
-                $('#Grupo').val(data[0].grupo);
+                console.log(data);
+                for(var i=0;i<data.length;i++){
+                    $("#IdAlumna").append("<option value=+"+data[i].id+">"+data[i].nombre+" "+data[i].apellido+"</option>");
+                    $('#IdAlumna').material_select();
+                }
             }
         });
     });
@@ -97,25 +110,25 @@ require_once "BackEnd/Grupos.php";
             url:"BackEnd/Controlador.php",
             type:'post',
             data:({
-                Action:"Alumnas",
-                Metodo: "GetAlumnas2"
+                Action:"Grupos",
+                Metodo: "GetGrupos"
             }),
             success: function (data) {
                 data=JSON.parse(data);
                 console.log(data);
                 for(var i=0;i<data.length;i++){
-                    $("#IdAlumna").append("<option value=+"+data[i].id+">"+data[i].nombre+" "+data[i].apellido+"</option>");
-                    $('#IdAlumna').material_select();
+                    $("#Grupo").append("<option value=+"+data[i].id+">"+data[i].nombre+"</option>");
+                    $('#Grupo').material_select();
                 }
             }
         });
-        $('#Grupo').val(" ");
+
+        $('#Grupo').val('');
         $('select').material_select();
         $('.datepicker').pickadate({
             format: 'yyyy-mm-dd',
             selectMonths: true,
             selectYears:false
-            //selectYears: 1
         });
         $("#uploadimage").on('submit',(function(e) {
             e.preventDefault();

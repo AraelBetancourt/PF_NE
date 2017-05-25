@@ -57,6 +57,12 @@ switch ($_POST['Action']){
                 unset($g);
                 echo json_encode($res);
                 break;
+            case "GetAlumnasbyGrupo":
+                $g=new Alumnas();
+                $res = $g->getAlumnasBygrupo($_POST['id']);
+                unset($g);
+                echo json_encode($res);
+                break;
             case "deleteAlumna":
                 $g=new Alumnas();
                 $res = $g->deleteA($_POST['atributos']);

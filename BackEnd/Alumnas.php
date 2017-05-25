@@ -21,6 +21,12 @@ class Alumnas extends Conection{
         return $art;
     }
 
+    public function getAlumnasBygrupo($id){
+        $result = $this->_db->query('SELECT * FROM Alumnas where idgrupo='.$id.';');
+        $art = $result->fetch_all(MYSQLI_ASSOC);
+        return $art;
+    }
+
     public function getAlumnas(){
         $result = $this->_db->query('SELECT * FROM Alumnas_Vista');
         $art = $result->fetch_all(MYSQLI_ASSOC);
