@@ -131,6 +131,7 @@ $res=$g->getGrupos();
                 Metodo: "GetAlumnas"
             }),
             success: function (data) {
+              console.log(data);
                 data=JSON.parse(data);
                 if(data.length!=0){
                     $('#Tabla').empty();

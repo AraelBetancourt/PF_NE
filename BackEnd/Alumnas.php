@@ -16,13 +16,13 @@ class Alumnas extends Conection{
     }
 
     public function getAlumnas2(){
-        $result = $this->_db->query('SELECT * FROM Alumnas');
+        $result = $this->_db->query('SELECT * FROM Alumnas;');
         $art = $result->fetch_all(MYSQLI_ASSOC);
         return $art;
     }
 
     public function getAlumnasBygrupo($id){
-        $result = $this->_db->query('SELECT * FROM Alumnas where idgrupo='.$id.';');
+        $result = $this->_db->query('SELECT * FROM Alumnas where idgrupo='.$id.' ORDER BY nombre ASC ;');
         $art = $result->fetch_all(MYSQLI_ASSOC);
         return $art;
     }

@@ -65,16 +65,28 @@ require_once "BackEnd/Grupos.php";
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input name="Folio" id="Folio" type="number" min="1" max="9999999999" class="validate">
+                <input name="Folio" id="Folio" type="number" class="validate">
                 <label for="Folio">Folio de autorización </label>
             </div>
         </div>
         <div class="col s10 offset-s1 center-align">
             <input id="enviar" name="enviar" type="submit" value="Aceptar" class="center-align submit btn aves-effect waves-light media-middle" />
+          <br>
+          <br>
+          <a href="http://www.damtec.mx" target="_parent"><img class="center-align" src="unnamed (1).jpg" style="width:150px;height:57px;"></a>
         </div>
 
     </form>
 </div>
+ <footer class="page-footer white">
+
+          <div class="footer-copyright purple darken-1">
+            <div class="container">
+            © 2017 Desarollado por DamTec
+            </div>
+          </div>
+        </footer>
+            
 <script>
     $('#Grupo').on('change', function() {
         $('#IdAlumna')

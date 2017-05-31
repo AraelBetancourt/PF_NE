@@ -53,7 +53,7 @@ switch ($_POST['Action']){
         switch ($_POST['Metodo']){
             case "GetAlumnas":
                 $g=new Alumnas();
-                $res = $g->getAlumnas();
+                $res=$g->getAlumnas();
                 unset($g);
                 echo json_encode($res);
                 break;
